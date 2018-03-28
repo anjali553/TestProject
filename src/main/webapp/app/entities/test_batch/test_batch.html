@@ -1,0 +1,44 @@
+<div>
+
+	<h2>
+		<alert ng-repeat="alert in alerts" type="{{alert.type}}"
+			close="closeAlert()" dismiss-on-timeout="1000">
+			<p class="text-center">{{alert.msg}}</p>
+		</alert>
+	</h2>
+	
+	<form name="editForm" role="form" novalidate ng-submit="save()">
+		<div class="modal-header"></div>
+			<div class="panel panel-primary">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title pull-left">Test Batch Details</h3> 
+				</div>
+				
+				<div class="list-group">
+					<div class="list-group-item">
+						<div class="row">
+							<div class="col-sm-3">
+								<label>Test Batch Name</label>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-2">
+								<input type="text" class="form-control" ng-disabled="true"
+									ng-model="test_batch_details.test_batch_name">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					
+					<button type="submit"
+						ng-disabled="editForm.$invalid || saveDisabled"
+						class="btn btn-primary">
+						<span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save & Next</span>
+					</button>
+				</div>
+		</div>
+	</form>
+</div>
