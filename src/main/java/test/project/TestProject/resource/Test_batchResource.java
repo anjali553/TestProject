@@ -91,9 +91,10 @@ public class Test_batchResource {
 	}
 	
 	
-	/*@RequestMapping(value = "/test_batch/getTestBatchCount", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-		public ResponseEntity<TestBatchCountDTO> getTestBatchCount( @Param("testBatchId") Long testBatchId)
+	@RequestMapping(value = "/test_batch/getTestBatchCount", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+		public ResponseEntity<Test_batch> getTestBatchCount( @Param("testBatchId") Long testBatchId)
 			throws Exception {
+			return null;
 		
-	}*/
+	}
 }
